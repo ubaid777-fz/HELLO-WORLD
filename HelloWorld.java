@@ -4,13 +4,17 @@ public class HelloWorld {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            System.out.print("Hello ");
+            String result = "";
 
+            // Enhanced for-loop
             for (String name : args) {
-                System.out.print(name + " ");
+                result += name + " ";
             }
 
-            System.out.println(); // new line
+            // Remove last space using substring
+            result = result.substring(0, result.length() - 1);
+
+            System.out.println("Hello " + result);
         }
     }
 }
